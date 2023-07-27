@@ -1,4 +1,4 @@
-package org.example.ioTest;
+package org.example.IoTest;
 
 
 import java.io.BufferedInputStream;
@@ -12,7 +12,7 @@ import java.nio.file.Files;
  * @date : 2023/7/17 17:46
  */
 
-public class folderTest {
+public class FolderTest {
     /**
      * 使用缓冲流复制文件夹
      *
@@ -62,7 +62,7 @@ public class folderTest {
     }
 
     public static void main(String[] args) {
-        folderTest folderTest = new folderTest();
+        FolderTest folderTest = new FolderTest();
         String sourcePath = "F:\\MyProjects\\Test\\RuoYi";
         String targetPath = "F:\\MyProjects\\Test\\RuoYiCopy";
         try {

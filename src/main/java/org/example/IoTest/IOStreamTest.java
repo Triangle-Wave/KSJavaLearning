@@ -1,4 +1,4 @@
-package org.example.ioTest;
+package org.example.IoTest;
 
 import java.io.*;
 import java.nio.file.Files;

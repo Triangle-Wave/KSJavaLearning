@@ -1,4 +1,6 @@
-package org.example;
+package org.example.ThreadTest;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 使用Thread证明++操作不是原子操作
@@ -6,31 +8,26 @@ package org.example;
  * @author : twave
  * @date : 2023/7/19 10:05
  */
-public class ThreadTest implements Runnable {
+public class ThreadTest {
     // 定义一个静态变量count，用于进行自增操作
     static int count = 0;
-
-    // 重写run方法，run方法的方法体就是线程执行体
-    @Override
-    public void run() {
-        // 使用for循环自增count变量
-        for (int i = 0; i < 10000; i++) {
-            count++;
-        }
-    }
+    static AtomicInteger acount;
 
     public static void main(String[] args) {
-        // 创建线程实例t1，他的线程执行体是ThreadTest的run()方法
+        acount = new AtomicInteger();
+        // 创建线程实例t1
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 10000; i++) {
                 count++;
+                acount.getAndIncrement();
             }
         });
 
-        // 创建线程实例t2，他的线程执行体是ThreadTest的run()方法
+        // 创建线程实例t2
         Thread t2 = new Thread(() -> {
             for (int i = 0; i < 10000; i++) {
                 count++;
+                acount.getAndIncrement();
             }
         });
 
@@ -47,5 +44,6 @@ public class ThreadTest implements Runnable {
         }
 
         System.out.println(count);
+        System.out.println(acount);
     }
 }

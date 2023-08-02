@@ -23,10 +23,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class S822 {
     public int flipGame(int[] fronts, int[] backs) {
-        AtomicInteger result = new AtomicInteger(Integer.MAX_VALUE);
+        int result = Integer.MAX_VALUE;
         Set<Integer> set = new HashSet<>();
         Set<Integer> set2 = new HashSet<>();
-
         for (int i = 0; i < fronts.length; i++) {
             if (fronts[i] == backs[i]) {
                 set.add(fronts[i]);
@@ -36,13 +35,12 @@ public class S822 {
             set2.add(backs[i]);
         }
         System.out.println(set2);
-        set2.forEach(i -> {
-            if (!set.contains(i)) {
-                result.set(Math.min(result.get(), i));
+        for (Integer integer : set2) {
+            if (!set.contains(integer)) {
+                result = Math.min(result, integer);
             }
-        });
-        int i = result.get();
-        return i == Integer.MAX_VALUE ? 0 : i;
+        }
+        return result == Integer.MAX_VALUE ? 0 : result;
     }
 
     public static void main(String[] args) {

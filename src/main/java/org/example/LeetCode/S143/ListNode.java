@@ -4,7 +4,7 @@ package org.example.LeetCode.S143;
  * @author : twave
  * @date : 2023/7/31 13:53
  */
-class ListNode {
+public class ListNode {
     int val;
     ListNode next;
 

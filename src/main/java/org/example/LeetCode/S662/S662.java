@@ -4,6 +4,8 @@ import javafx.util.Pair;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author TWAVE
@@ -11,6 +13,7 @@ import java.util.Queue;
  */
 public class S662 {
     public int widthOfBinaryTree(TreeNode root) {
+        ExecutorService service = Executors.newCachedThreadPool();
         if (root == null) {
             return 0;
         }
@@ -40,6 +43,5 @@ public class S662 {
             maxWidth = Math.max(maxWidth, right - left + 1);
         }
         return maxWidth;
-
     }
 }

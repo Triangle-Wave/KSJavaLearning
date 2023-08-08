@@ -11,6 +11,7 @@ import java.util.List;
 public class S344 {
     public void reverseString(char[] s) {
         char temp;
+        String s1 = new String(s);
         for (int i = 0, j = s.length - 1; i < j; i++, j--) {
             temp = s[i];
             s[i] = s[j];

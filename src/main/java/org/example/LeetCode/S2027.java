@@ -3,6 +3,7 @@ package org.example.LeetCode;
 /**
  * @author TWAVE
  * @date 2023/8/11 17:12
+ * @finishTime 2023/08/11 17:36:16
  */
 public class S2027 {
     public int minimumMoves(String s) {

@@ -1,16 +1,14 @@
 package org.example.LeetCode;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author TWAVE
  * @date 2023/8/22 16:32
+ * @finishTime 2023/08/22 17:10:57
  */
 public class S849 {
     public int maxDistToClosest(int[] seats) {
-        int result = 0;
-        int start = 0, end = 0;
+        int result = 0,start = 0, end;
         for (int i = 0; i < seats.length; i++) {
             if (seats[i] == 1 || i == seats.length - 1) {
                 end = i;

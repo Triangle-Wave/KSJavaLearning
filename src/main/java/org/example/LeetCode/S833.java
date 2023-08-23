@@ -9,17 +9,6 @@ import java.util.HashMap;
  */
 public class S833 {
     public String findReplaceString(String s, int[] indices, String[] sources, String[] targets) {
-        // String start = s.substring(indices[0], indices[1] - 1);
-        // String result = s.substring(indices[0] + 1, indices[1]);
-        // String end = s.substring(indices[1]);
-        // System.out.printf("start: %s result: %s end: %s", start, result, end);
-        // if (start.equals(sources[0])) {
-        //     start = targets[0];
-        // }
-        // if (end.equals(sources[1])) {
-        //     end = targets[1];
-        // }
-        // return start + result + end;
         HashMap<String, Integer> map = new HashMap<>();
         map.put(sources[0], indices[0]);
         map.put(sources[1], indices[1]);

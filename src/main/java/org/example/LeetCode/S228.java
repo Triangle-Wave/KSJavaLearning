@@ -19,14 +19,17 @@ public class S228 {
         int start = 0, end = 0;
         while (end < nums.length) {
             // 用StringBuilder代替String，减少内存开销
+            // 如果start和end相等，且end等于数组最后一个元素，说明只有一个元素，直接添加到result中
             if (start == end && end == nums.length - 1) {
                 result.add(new StringBuilder().append(nums[start]).toString());
                 break;
             }
+            // 如果end等于数组最后一个元素，且end==数组长度，说明整个数组都是连续的，直接添加到result中
             if (end == nums.length - 1) {
                 result.add(new StringBuilder().append(nums[start]).append("->").append(nums[end]).toString());
                 break;
             }
+            // 如果end+1不等于end+1，说明不连续，添加到result中
             if (nums[end + 1] != nums[end] + 1) {
                 // 用占位符构造字符串，添加到result中
                 if (start == end) {

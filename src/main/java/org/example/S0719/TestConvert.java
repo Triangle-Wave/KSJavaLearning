@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class TestConvert {
     public static void main(String[] args) throws IOException {
         // 准备一个字符串
-        String contents = " 上海金仕达软件科技股份有限公司";
+        String contents = " 你好，世界！";
         System.out.println(contents);
         // 请转化为字节数组并输出
         byte[] bytes = contents.getBytes();

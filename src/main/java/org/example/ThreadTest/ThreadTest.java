@@ -1,5 +1,6 @@
 package org.example.ThreadTest;
 
+import java.util.Stack;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -42,6 +43,7 @@ public class ThreadTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        Stack<Integer> stack = new Stack<>();
 
         System.out.println(count);
         System.out.println(acount);

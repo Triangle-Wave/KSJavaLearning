@@ -1,4 +1,4 @@
-package org.example.Learning;
+package org.example.Learning.ThreadLearning;
 
 import java.io.IOException;
 

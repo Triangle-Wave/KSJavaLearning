@@ -1,4 +1,4 @@
-package org.example.Learning;
+package org.example.Learning.ThreadLearning;
 
 /**
  * @author : twave

@@ -15,7 +15,6 @@ public class S2511 {
         for (int i = 0; i < forts.length; i++) {
             if (forts[i] == 1 || forts[i] == -1) {
                 if (isEmpty) {
-                    stack = new int[]{i, forts[i]};
                     isEmpty = false;
                 } else {
                     // 如果栈内元素和下一个元素相等，就将栈内元素换为下一个元素
@@ -23,8 +22,8 @@ public class S2511 {
                         res = Math.max(i - stack[0] - 1, res);
                     }
                     // 如果栈内元素和下一个元素不相等，就计算值并和res比较
-                    stack = new int[]{i, forts[i]};
                 }
+                stack = new int[]{i, forts[i]};
             }
         }
         return res;
@@ -32,7 +31,7 @@ public class S2511 {
 
     public static void main(String[] args) {
         S2511 solution = new S2511();
-        // System.out.println(solution.captureForts(new int[]{1, 1, 1, 0, 0, 1, -1, -1, -1}));
+        System.out.println(solution.captureForts(new int[]{1, 1, 1, 0, 0, 1, -1, -1, -1}));
         System.out.println(solution.captureForts(new int[]{1, 0, 0, -1, 0, 0, 0, 0, 1}));
     }
 }

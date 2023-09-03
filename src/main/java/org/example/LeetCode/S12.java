@@ -8,6 +8,8 @@
  */
 package org.example.LeetCode;
 
+import java.util.concurrent.Future;
+
 public class S12 {
     public static void main(String[] args) {
         Solution_2 solution = new Solution_2();

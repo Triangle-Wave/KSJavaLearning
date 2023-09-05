@@ -7,6 +7,13 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 package org.example.Learning;
+
+import org.example.FieldTest.Student;
+import sun.reflect.generics.tree.Tree;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * Java泛型的学习
  */
@@ -21,6 +28,7 @@ public class generics_study {
         Combine<Object[]> arrayCombine = new Combine<>();
         Object[] resultObject = arrayCombine.combine(new Object[] { 1, 2 }, new Object[] { "t", "1" });
         System.out.println(resultObject);
+        List<Student> list = new ArrayList<>();
     }
 }
 
